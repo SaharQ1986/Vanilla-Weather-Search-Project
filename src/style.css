@@ -13,6 +13,7 @@ body {
 .overview {
   margin-bottom: 20px;
 }
+
 h1 {
   color: #495057;
   display: block;
@@ -30,8 +31,10 @@ li {
   font-size: 18px;
   font-weight: 100;
   line-height: 19px;
-  margin: 0;
+  margin: 5px;
   padding: 0;
+}
+li::first-letter {
   text-transform: capitalize;
 }
 .weather-temperature img {
