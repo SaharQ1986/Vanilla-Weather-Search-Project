@@ -59,11 +59,10 @@ function showForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `203fa770242fcd2b9555d832a88ea567`;
 
   let apiCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiCall);
+
   axios.get(apiCall).then(showForecast);
 }
 
@@ -134,6 +133,7 @@ form.addEventListener("submit", handlesubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemprature);
+
 fahrenheitLink.addEventListener("click", displayFahrenheitTemprature);
 
 search("New York");
